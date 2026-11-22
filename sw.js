@@ -1,5 +1,5 @@
 // Кэш для работы без интернета. При изменении файлов поменяй номер версии.
-const CACHE = 'moy-den-v1';
+const CACHE = 'moy-den-v2';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
